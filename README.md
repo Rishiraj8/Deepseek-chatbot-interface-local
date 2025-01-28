@@ -1,4 +1,4 @@
-# Ollama Chatbot Interface
+# DeepSeek Chatbot Interface
 
 A web-based chatbot interface that interacts with the **DeepSeek model** from **Ollama**. The backend is built with **Flask**, and the frontend uses **HTML**, **CSS**, and **JavaScript**. The Flask server processes user input and returns responses (including emojis), which are displayed in an interactive chat interface.
 
