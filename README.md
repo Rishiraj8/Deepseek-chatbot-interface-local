@@ -29,12 +29,21 @@ Follow these steps to set up and run the project on your local machine.
    
    Ollama is available for **Windows**, **macOS**, and **Linux**.
 
+
 2. **Verify Ollama Installation**:
    - Open a terminal or command prompt and run:
      ```bash
      ollama --version
      ```
    - If the command returns the version number of **Ollama**, it is successfully installed.
+
+3. **Then Install DeepSeek Model**:
+   - Open a terminal or command prompt and run:
+        ```bash
+     ollama run deepseek-r1:8b
+     ```
+    -- It will download a 4.9gb model automatically on your PC
+
 
 ---
 

@@ -9,17 +9,10 @@ function addMessage(message, isUser) {
 
   if (isUser) {
     messageElement.textContent = message
+    scrollToBottom()
   } else {
     typewriterEffect(messageElement, message)
   }
-
-  // Smooth scroll to the bottom
-  setTimeout(() => {
-    chatBox.scrollTo({
-      top: chatBox.scrollHeight,
-      behavior: "smooth",
-    })
-  }, 100)
 }
 
 function typewriterEffect(element, text, speed = 30) {
@@ -28,10 +21,15 @@ function typewriterEffect(element, text, speed = 30) {
     if (i < text.length) {
       element.textContent += text.charAt(i)
       i++
+      scrollToBottom()
     } else {
       clearInterval(timer)
     }
   }, speed)
+}
+
+function scrollToBottom() {
+  chatBox.scrollTop = chatBox.scrollHeight
 }
 
 async function sendMessage() {
